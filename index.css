@@ -1,0 +1,161 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap');
+/* Root */
+
+:root {
+    --main-color-red: #D42026;
+    --list-font-color: #4E4E4E;
+}
+
+/* Style classes */
+
+.light-font {
+    font-weight: 300;
+}
+
+.regular-font {
+    font-weight: 400;
+}
+
+.black-font {
+    font-weight: 900;
+}
+
+.font-bottom-line {
+    position: relative;
+}
+
+.font-bottom-line:before {
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+    height: 4px;
+    width: 54px;
+    content: '';
+    background-color: var(--main-color-red);
+}
+
+.search-input {
+    display: flex;
+    flex-flow: column;
+    padding: 0 42px 34px;
+}
+
+.search-input input {
+    width: 400px;
+    height: 31px;
+    border: 1px solid rgb(165, 164, 164);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 6px;
+    margin-top: 2px;
+}
+
+.search-input label {
+    color: var(--main-color-red);
+    font-size: 16px;
+    line-height: 19px;
+}
+
+#content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+#content h2 {
+    color: var(--main-color-red);
+    margin-top: 100px;
+    display: none;
+}
+
+/* DOM Elements */
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+header {
+    padding: 20px 42px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+}
+
+header h2 {
+    color: var(--main-color-red);
+    line-height: 32px;
+    font-size: 27px;
+    opacity: 100%;
+    margin: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 12px;
+    width: 100%;
+    background-color: var(--main-color-red);
+}
+
+section {
+    padding: 0 42px;
+}
+
+/* Media query */
+
+@media (max-width: 992px) {
+    header>h2 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 12px 42px;
+    }
+    header h2 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .font-bottom-line:before {
+        margin-top: 2px;
+        height: 2px;
+    }
+    .search-input {
+        padding: 0 42px 12px;
+        margin-top: 2px;
+    }
+    .search-input input {
+        width: auto;
+    }
+    section {
+        padding: 0;
+    }
+}
+
+.modal-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-list::-webkit-scrollbar-track {
+    background-color: rgba(119, 119, 119, 0.4);
+    border-radius: 10px;
+}
+
+.modal-list::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
